@@ -1,19 +1,32 @@
 package com.shaundashjian.uvt;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class UvtCalculator {
 
-    public static void main(String[] args) {
-        System.out.println("Hello");
-    }
+	private List<Fragment> fragments;	
+	
+    public UvtCalculator() {
+		fragments = new ArrayList<>();
+	}
 
 	public void addFragment(Fragment fragment) {
-		// TODO Auto-generated method stub
-		
+		fragments.add(fragment);
 	}
 
 	public int getUvt() {
-		// TODO Auto-generated method stub
-		return 0;
+		Map<Integer, Boolean> viewMap = new HashMap<>();
+		for (Fragment fragment : fragments) {
+			for (int i = fragment.getStartTime(); i < fragment.getEndTime(); i++) {
+				if (!viewMap.containsKey(i)) {
+					viewMap.put(i, true);
+				}
+			}
+		}
+		return viewMap.size();
 	}
 
 }
