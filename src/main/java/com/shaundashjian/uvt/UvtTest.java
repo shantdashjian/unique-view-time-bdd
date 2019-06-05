@@ -7,6 +7,7 @@ public class UvtTest {
 	public static void main(String[] args) {
 		UvtCalculator uvtCalculator = new UvtCalculator();
 		
+		// If there are no arguments entered from the command line
 		if (args.length == 0) {
 			System.out.println("**********************************************");
 			System.out.println("*** Welcome to Unique View Time Calculator ***");
@@ -41,7 +42,9 @@ public class UvtTest {
 			}
 			System.out.println("Unique View Time: " + uvtCalculator.getUvt() + " milliseconds");
 			scanner.close();
-		} else {
+		} 
+		// If there already are arguments entered from the command line
+		else {
 			if (args.length % 2 != 0) {
 				System.out.println("Incorrect number of fragments. Goodbye!!");
 			} else {
