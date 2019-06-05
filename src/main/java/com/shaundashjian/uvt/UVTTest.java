@@ -2,7 +2,7 @@ package com.shaundashjian.uvt;
 
 import java.util.Scanner;
 
-public class UVTTest {
+public class UvtTest {
 
 	public static void main(String[] args) {
 		UvtCalculator uvtCalculator = new UvtCalculator();
