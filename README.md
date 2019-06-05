@@ -70,6 +70,6 @@ open target/site/serenity/index.html
 3. I then added other unit tests to cover different edge cases.
 4. I added scenerios written in [Cucumber](https://cucumber.io). Using Cucumber scenarios improves communication with business and provides a living documentation and executable specification for the program.
 5. I added the [Serenity BDD](https://www.thucydides.info/#/) plugin which generates an HTML report for the scenarios.
-6. I added the [Surefire Report plugin](https://maven.apache.org/surefire/maven-surefire-report-plugin/) which generates an HTML report for the unit tests.
+6. I added the [Surefire Report](https://maven.apache.org/surefire/maven-surefire-report-plugin/) plugin which generates an HTML report for the unit tests.
 
 [Up](README.md)
