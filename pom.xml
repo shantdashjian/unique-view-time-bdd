@@ -15,6 +15,7 @@
 		<junit.jupiter.version>5.5.0-M1</junit.jupiter.version>
 		<junit.platform.version>1.5.0-M1</junit.platform.version>
 		<junit.platform.surefire.provider.version>1.3.2</junit.platform.surefire.provider.version>
+		<cucumber.version>1.2.5</cucumber.version>
 	</properties>
 
 	<build>
@@ -147,5 +148,17 @@
 			<version>${junit.platform.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
 	</dependencies>
 </project>
