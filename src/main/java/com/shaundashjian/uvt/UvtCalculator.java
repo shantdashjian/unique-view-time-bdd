@@ -21,20 +21,22 @@ public class UvtCalculator {
 
 	public int getUvt() {
 		// Create a temporary hash map that has an entry for each viewed millisecond
-		Map<Integer, Boolean> viewMap = new HashMap<>();
+		Map<Integer, Boolean> viewedMilliseconds = new HashMap<>();
 		
-		// Loop through each fragment entered
-		// For each fragment, add an entry for each millisecond not already in the view map
+		// For each fragment:
+		// 		add an entry for each millisecond not already added to the viewedMilliseconds map
 		for (Fragment fragment : fragments) {
-			for (int i = fragment.getStartTime(); i < fragment.getEndTime(); i++) {
-				if (!viewMap.containsKey(i)) {
-					viewMap.put(i, true);
+			int startTime = fragment.getStartTime();
+			int endTime = fragment.getEndTime();
+			for (int i = startTime; i < endTime; i++) {
+				if (!viewedMilliseconds.containsKey(i)) {
+					viewedMilliseconds.put(i, true);
 				}
 			}
 		}
 		
-		// The size of the view map is the total number of milliseconds viewed, i.e. UVT
-		return viewMap.size();
+		// The size of the viewedMilliseconds map is the total number of milliseconds viewed, i.e. UVT
+		return viewedMilliseconds.size();
 	}
 
 }
