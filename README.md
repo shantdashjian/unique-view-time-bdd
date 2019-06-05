@@ -9,7 +9,7 @@ A Java demo program that takes a collection of video viewing records and calcula
 1. [How to Build the Program](#how-to-build-the-program)
 2. [How to Run the Program](#how-to-run-the-program)
 3. [UVT Algorithm](#uvt-algorithm)
-4. [How to Run the Scenarios and Generate BDD Report](#how-to-run-the-scenarios-and-generate-bdd-report)
+4. [How to Run the Test Scenarios and Generate HTML Test Report](#how-to-run-the-test-scenarios-and-generate-html-test-report)
 5. [Development Approach](#development-appraoch)
 
 ## How to Build the Program
@@ -35,7 +35,8 @@ java -jar target/uvt.jar 0 1000 1000 2000
 The core algorithm that calculates UVT is in the `UvtCalculator` class, `getUvt` method. 
 ![alt text](images/uvt-algorithm.png "UVT Algorithm")
 
-## How to Run the Scenarios and Generate BDD Report
+## How to Run the Test Scenarios and Generate HTML Test Report
+The program tests are written as scenarios using [Cucumber](https://cucumber.io), a [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) tool. To run the tests: 
 ```console
 mvn verify
 ```
