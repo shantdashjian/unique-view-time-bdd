@@ -1,5 +1,5 @@
 # Unique View Time with BDD Scenarios
-A Java demo program that takes a collection of video viewing records and calculates UVT (unique view time), documented and tested with Cucumber (BDD).
+A Java demo program that takes a collection of video viewing records and calculates UVT (unique view time), documented and tested with Cucumber, the BDD tool.
 
 ![alt text](images/feature.png "Feature")
 
@@ -13,7 +13,7 @@ A Java demo program that takes a collection of video viewing records and calcula
 5. [Development Approach](#development-appraoch)
 
 ## How to Build the Program
-You need to have [Maven](https://maven.apache.org/install.html) installed. In your terminal, clone this repository, then `cd` to the newly created project directory. Using Maven, download dependencies, compile, and build executable JAR:
+You need to have [Java](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and [Maven](https://maven.apache.org/install.html) installed. In your terminal, clone this repository, then change directory to the newly created project directory. Using Maven, download dependencies, compile, and build executable JAR. Here are the steps:
 ```console
 git clone https://github.com/shaundashjian/unique-view-time-bdd.git
 cd unique-view-time-bdd
@@ -47,9 +47,9 @@ open target/site/serenity/index.html
 
 ## Development Approach
 1. I created a skeleton for the program using a Maven archetype
-2. I used [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development), adding a unit test for the happy path and writing the algorithm to pass the test.
-3. I then added other unit tests to cover edge cases.
-4. I replaced unit tests with BDD scenerios written in Cucumber, which improve communication with business and provide a living documentation and executable specification for the program
-5. I added the Serenity BDD plugin which generates an HTML report for test results and scenarios
+2. I used [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) with JUnit to drive out the design of the program and the algorithm. I first added one unit test for the happy path, one fragment, and created the classes and the algorithm to pass it.
+3. I then added other unit tests to cover different edge cases.
+4. I replaced the JUnit tests with BDD scenerios written in [Cucumber](https://cucumber.io). Using Cucumber scenarios improves communication with business and provides a living documentation and executable specification for the program.
+5. I added the Serenity BDD plugin which generates an HTML report for the test results and scenarios.
 
 [Up](README.md)
