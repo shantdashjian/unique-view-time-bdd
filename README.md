@@ -11,7 +11,7 @@ A Java demo program that takes a collection of video viewing records and calcula
 3. [UVT Algorithm](#uvt-algorithm)
 4. [How to Run the Unit Tests and Generate the HTML Unit Test Report](#how-to-run-the-unit-tests-and-generate-the-html-unit-test-report)
 5. [How to Run the Cucumber Scenarios and Generate the HTML Features Report](#how-to-run-the-cucumber-scenarios-and-generate-the-html-features-report)
-6. [Development Approach](#development-appraoch)
+6. [Development Approach](#development-approach)
 
 ## How to Build the Program
 You need to have [Java](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and [Maven](https://maven.apache.org/install.html) installed to build and run the program. In your terminal, clone this repository, then change directory to the newly created project directory. Using Maven, download dependencies, compile, and build the executable JAR. Here are the steps:
