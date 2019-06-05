@@ -52,7 +52,7 @@ open target/site/surefire-report.html
 ![alt text](images/unit-tests-1.png "Unit Test Report")
 ![alt text](images/unit-tests-2.png "Unit Test Report")
 
-## How to Run the Test Scenarios and Generate the HTML Test Report
+## How to Run the Cucumber Scenarios and Generate the HTML Features Report
 The BDD scenarios are written using [Cucumber](https://cucumber.io), a [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) tool. To run the scenarios and generate an HTML features report: 
 ```console
 mvn verify
