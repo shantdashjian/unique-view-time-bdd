@@ -18,7 +18,7 @@ You need to have [Java](https://www.oracle.com/technetwork/java/javase/downloads
 ```console
 git clone https://github.com/shaundashjian/unique-view-time-bdd.git
 cd unique-view-time-bdd
-mvn clean package
+mvn package
 ```
 
 ## How to Run the Program
