@@ -45,7 +45,7 @@ To generate an HTML report for the unit tests:
 ```console
 mvn surefire-report:report
 ```
-To view the generated report that shows overall, open your web browser and open the file `<project-directory>/target/site/surefire-report.html`. To do that on the `Mac`, `cd` to the project directory and then you could:
+To view the generated report that shows unit test results, open your web browser and open the file `<project-directory>/target/site/surefire-report.html`. To do that on the `Mac`, `cd` to the project directory and then you could:
 ```console
 open target/site/surefire-report.html
 ```
