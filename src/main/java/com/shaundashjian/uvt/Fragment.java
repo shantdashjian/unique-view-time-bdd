@@ -8,8 +8,8 @@ public class Fragment {
 	
 	// Constructor
 	public Fragment(int startTime, int endTime) {
-		this.startTime = startTime;
-		this.endTime = endTime;
+		setStartTime(startTime);
+		setEndTime(endTime);
 	}
 	
 	// Getters and setters
