@@ -39,7 +39,10 @@ The core algorithm that calculates UVT is in the `UvtCalculator` class, `getUvt`
 ```console
 mvn verify
 ```
-To view the generated test report that shows overall test results and business-friendly description of the feature and scenarios, open your web browser and open the file `<project-directory>/target/site/serenity/index.html`
+To view the generated HTML test report that shows overall test results and business-friendly description of the feature and scenarios, open your web browser and open the file `<project-directory>/target/site/serenity/index.html`. To do that on the `Mac`, `cd` to the project directory and then you could:
+```console
+open target/site/serenity/index.html
+```
 
 ## Development Approach
 1. I created a skeleton for the program using a Maven archetype
