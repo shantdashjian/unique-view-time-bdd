@@ -69,7 +69,7 @@ open target/site/serenity/index.html
 2. I used [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) with JUnit to drive out the design of the program and the algorithm. I first added one unit test for the happy path, one fragment from 0 to 100000, and created the classes and the algorithm to pass it.
 3. I then added other unit tests to cover different edge cases.
 4. I added scenerios written in [Cucumber](https://cucumber.io). Using Cucumber scenarios improves communication with business and provides a living documentation and executable specification for the program.
-5. I added the Serenity BDD plugin which generates an HTML report for the scenarios.
-6. I added the Surefire Report plugin which generates an HTML report for the unit tests.
+5. I added the [Serenity BDD](https://www.thucydides.info/#/) plugin which generates an HTML report for the scenarios.
+6. I added the [Surefire Report plugin](https://maven.apache.org/surefire/maven-surefire-report-plugin/) which generates an HTML report for the unit tests.
 
 [Up](README.md)
