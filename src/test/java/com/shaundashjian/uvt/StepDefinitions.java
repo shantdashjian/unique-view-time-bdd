@@ -1,6 +1,6 @@
 package com.shaundashjian.uvt;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -21,7 +21,7 @@ public class StepDefinitions {
 	}
 
 	@Then("the UVT should be {int} milliseconds")
-	public void the_UVT_should_be_milliseconds(Integer expectedUvt) {
+	public void the_UVT_should_be_milliseconds(int expectedUvt) {
 	    assertEquals(expectedUvt, uvtCalculator.getUvt());
 	}
 

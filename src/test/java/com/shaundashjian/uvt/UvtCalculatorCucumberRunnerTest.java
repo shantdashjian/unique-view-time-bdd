@@ -8,6 +8,6 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty"}, features = "classpath:features")
-public class UvtCalculatorTestRunner {
+public class UvtCalculatorCucumberRunnerTest {
 	
 }
