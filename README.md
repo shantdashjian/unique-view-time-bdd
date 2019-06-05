@@ -49,6 +49,9 @@ To view the generated report that shows unit test results, open your web browser
 ```console
 open target/site/surefire-report.html
 ```
+![alt text](images/unit-tests-1.png "Unit Test Report")
+![alt text](images/unit-tests-2.png "Unit Test Report")
+
 ## How to Run the Test Scenarios and Generate the HTML Test Report
 The BDD scenarios are written using [Cucumber](https://cucumber.io), a [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) tool. To run the scenarios and generate an HTML features report: 
 ```console
@@ -58,6 +61,8 @@ To view the generated report that shows overall test results and business-friend
 ```console
 open target/site/serenity/index.html
 ```
+![alt text](images/features-1.png "Features Report")
+![alt text](images/features-2.png "Features Report")
 
 ## Development Approach
 1. I created a skeleton for the program using a Maven archetype.
