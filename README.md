@@ -1,4 +1,4 @@
-# Unique View Time with Unit Tests and Scenarios
+# Unique View Time Calculator with Unit Tests and Scenarios
 A Java demo program that takes a collection of video viewing records and calculates the UVT, or unique view time. Unit tests in JUnit and scenarios in Cucumber are included.
 
 ![alt text](images/feature.png "Feature")
