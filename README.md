@@ -8,7 +8,7 @@ A Java demo program that takes a collection of video viewing records and calcula
 ## In This Document:
 1. [How to Build the Program](#how-to-build-the-program)
 2. [How to Run the Program](#how-to-run-the-program)
-3. [UVT Algorithm](#uvt-algorithm)
+3. [The UVT Algorithm](#the-uvt-algorithm)
 4. [How to Run the Unit Tests and Generate the HTML Unit Test Report](#how-to-run-the-unit-tests-and-generate-the-html-unit-test-report)
 5. [How to Run the Cucumber Scenarios and Generate the HTML Features Report](#how-to-run-the-cucumber-scenarios-and-generate-the-html-features-report)
 6. [Development Approach](#development-approach)
@@ -32,7 +32,7 @@ java -jar target/uvt.jar 0 1000 1000 2000
 2. **Interactive:** Alteratively, you could run the program with no initial arguments and interactively enter a pair of times, i.e. start time and end time, for each viewed fragment. Here is how it would look like:
 ![alt text](images/run-with-no-arguments.png "Run interactively")
 
-## UVT Algorithm
+## The UVT Algorithm
 The core algorithm that calculates UVT is in the `UvtCalculator` class, `getUvt` method. 
 ![alt text](images/uvt-algorithm.png "UVT Algorithm")
 
