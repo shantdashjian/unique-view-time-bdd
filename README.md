@@ -33,7 +33,7 @@ java -jar target/uvt.jar 0 1000 1000 2000
 ![alt text](images/run-with-no-arguments.png "Run interactively")
 
 ## The UVT Algorithm
-The core algorithm that calculates UVT is in the [`UvtCalculator` class's](src/main/java/com/shaundashjian/uvt/UvtCalculator.java) [`getUvt` method](src/main/java/com/shaundashjian/uvt/UvtCalculator.java#L22). 
+The core algorithm that calculates UVT is in the [`UvtCalculator` class's](src/main/java/com/shaundashjian/uvt/UvtCalculator.java) [`getUvt()` method](src/main/java/com/shaundashjian/uvt/UvtCalculator.java#L22). 
 ![alt text](images/uvt-algorithm.png "UVT Algorithm")
 
 ## How to Run the Unit Tests and Generate the HTML Unit Test Report
