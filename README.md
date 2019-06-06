@@ -29,11 +29,11 @@ java -jar target/uvt.jar 0 1000 1000 2000
 ```
 ![alt text](images/run-with-arguments.png "Run with arguments")
 
-2. **Interactive:** Alteratively, you could run the program with no initial arguments and interactively enter a pair of times, i.e. start time and end time, for each viewed fragment. Here is how it would look like:
+2. **Interactive:** Alteratively, you could run the program with no initial arguments. Run the program and interactively enter a pair of times, i.e. start time and end time, for each viewed fragment. Here is how it would look like:
 ![alt text](images/run-with-no-arguments.png "Run interactively")
 
 ## The UVT Algorithm
-The core algorithm that calculates UVT is in the `UvtCalculator` class, `getUvt` method. 
+The core algorithm that calculates UVT is in the [`UvtCalculator` class's](src/main/java/com/shaundashjian/uvt/UvtCalculator.java) `getUvt` method. 
 ![alt text](images/uvt-algorithm.png "UVT Algorithm")
 
 ## How to Run the Unit Tests and Generate the HTML Unit Test Report
