@@ -28,7 +28,7 @@ public class UvtCalculator {
 		for (Fragment fragment : fragments) {
 			int startTime = fragment.getStartTime();
 			int endTime = fragment.getEndTime();
-			for (int i = startTime; i < endTime; i++) {
+			for (int i = startTime; i <= endTime; i++) {
 				if (!viewedMilliseconds.containsKey(i)) {
 					viewedMilliseconds.put(i, true);
 				}
