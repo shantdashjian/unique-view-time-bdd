@@ -61,6 +61,7 @@ To view the generated report that shows overall test results and business-friend
 ```console
 open target/site/serenity/index.html
 ```
+![alt text](images/overall-results.png "Features Report")
 ![alt text](images/features-1.png "Features Report")
 ![alt text](images/features-2.png "Features Report")
 
