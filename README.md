@@ -6,12 +6,17 @@ A Java demo program that takes a collection of video viewing records and calcula
 ![alt text](images/run-with-no-arguments.png "Run")
 
 ## In This Document:
-1. [How to Build the Program](#how-to-build-the-program)
-2. [How to Run the Program](#how-to-run-the-program)
-3. [The UVT Algorithm](#the-uvt-algorithm)
-4. [How to Run the Unit Tests and Generate the HTML Unit Test Report](#how-to-run-the-unit-tests-and-generate-the-html-unit-test-report)
-5. [How to Run the Cucumber Scenarios and Generate the HTML Features Report](#how-to-run-the-cucumber-scenarios-and-generate-the-html-features-report)
-6. [Development Approach](#development-approach)
+1. [Application URL](#application-url)
+2. [How to Build the Program](#how-to-build-the-program)
+3. [How to Run the Program](#how-to-run-the-program)
+4. [The UVT Algorithm](#the-uvt-algorithm)
+5. [How to Run the Unit Tests and Generate the HTML Unit Test Report](#how-to-run-the-unit-tests-and-generate-the-html-unit-test-report)
+6. [How to Run the Cucumber Scenarios and Generate the HTML Features Report](#how-to-run-the-cucumber-scenarios-and-generate-the-html-features-report)
+7. [Development Approach](#development-approach)
+
+## Application URL
+http://shaundashjian.com:8080/UniqueViewTimeCalculator/
+Note: This is the URL to the AngularJS version of the algorithm.
 
 ## How to Build the Program
 You need to have [Java](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and [Maven](https://maven.apache.org/install.html) installed to build and run the program. In your terminal, clone this repository, then change directory to the newly created project directory. Using Maven, download dependencies, compile, and build the executable JAR. Here are the steps:
