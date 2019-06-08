@@ -6,7 +6,7 @@ A Java demo program that takes a collection of video viewing records and calcula
 ![alt text](images/run-with-no-arguments.png "Run")
 
 ## In This Document:
-1. [Application URL](#application-url)
+1. [Live Demo URL](#live-demo-url)
 2. [How to Build the Program](#how-to-build-the-program)
 3. [How to Run the Program](#how-to-run-the-program)
 4. [The UVT Algorithm](#the-uvt-algorithm)
@@ -14,10 +14,10 @@ A Java demo program that takes a collection of video viewing records and calcula
 6. [How to Run the Cucumber Scenarios and Generate the HTML Features Report](#how-to-run-the-cucumber-scenarios-and-generate-the-html-features-report)
 7. [Development Approach](#development-approach)
 
-## Application URL
+## Live Demo URL
 http://shaundashjian.com:8080/UniqueViewTimeCalculator/
 
-**Note:** This is the URL to the live demo of [the AngularJS version of the algorithm.](https://github.com/shaundashjian/uvt-gui).
+**Note:** This is the URL for the live demo of [the JavaScript implementation of the UVT algorithm, with GUI built with AngularJS.](https://github.com/shaundashjian/uvt-gui).
 
 ## How to Build the Program
 You need to have [Java](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and [Maven](https://maven.apache.org/install.html) installed to build and run the program. In your terminal, clone this repository, then change directory to the newly created project directory. Using Maven, download dependencies, compile, and build the executable JAR. Here are the steps:
