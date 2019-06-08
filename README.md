@@ -16,7 +16,8 @@ A Java demo program that takes a collection of video viewing records and calcula
 
 ## Application URL
 http://shaundashjian.com:8080/UniqueViewTimeCalculator/
-Note: This is the URL to the AngularJS version of the algorithm.
+
+**Note:** This is the URL to the live demo of [the AngularJS version of the algorithm.](https://github.com/shaundashjian/uvt-gui).
 
 ## How to Build the Program
 You need to have [Java](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and [Maven](https://maven.apache.org/install.html) installed to build and run the program. In your terminal, clone this repository, then change directory to the newly created project directory. Using Maven, download dependencies, compile, and build the executable JAR. Here are the steps:
