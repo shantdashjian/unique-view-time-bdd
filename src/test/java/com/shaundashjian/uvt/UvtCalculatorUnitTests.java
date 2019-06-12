@@ -85,5 +85,15 @@ public class UvtCalculatorUnitTests {
     	
     	assertEquals(expectedUvt, uvtCalculator.getUvt());
     }
+    
+    @Test
+    public void test_three_fragments_second_overlaps_the_first_1_10_5_15_7_13_should_return_15() {
+    	uvtCalculator.addFragment(new Fragment(1,10));
+    	uvtCalculator.addFragment(new Fragment(5, 15));
+    	uvtCalculator.addFragment(new Fragment(7, 13));
+    	int expectedUvt = 15;
+    	
+    	assertEquals(expectedUvt, uvtCalculator.getUvt());
+    }
 
 }

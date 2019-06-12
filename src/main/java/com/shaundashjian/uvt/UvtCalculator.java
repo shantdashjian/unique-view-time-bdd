@@ -76,6 +76,8 @@ public class UvtCalculator {
 							&& fragment.getEndTime() >= range.getStartTime()
 							&& fragment.getEndTime() <= range.getEndTime()) {
 						fragment.setEndTime(range.getStartTime() - 1);
+						i--;
+						continue START_OVER;	
 					}
 				}
 
