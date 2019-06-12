@@ -1,7 +1,57 @@
 # Unique View Time Calculator with Unit Tests and Scenarios
 A Java demo program that takes a collection of video viewing records and calculates the UVT, or unique view time. Unit tests in JUnit and scenarios in Cucumber are included.
 
-![alt text](images/feature.png "Feature")
+```
+Feature: UVT Calculation
+	The program takes a collection of records, each representing a
+	viewed fragment of a given video. Each fragment has two values:
+	a start time, and an end time, each in milliseconds. It then 
+	calculates the UVT, unique view time.
+	
+	Background: 
+		Given a UVT calculator
+		
+	Scenario: One fragment
+		When the user views a fragment from 1 to 10 milliseconds
+		Then the UVT should be 10 milliseconds
+		
+	Scenario: Two fragments, second inside the first
+		When the user views a fragment from 1 to 10 milliseconds
+		And the user views a fragment from 1 to 5 milliseconds
+		Then the UVT should be 10 milliseconds
+		
+	Scenario: Two fragments, first inside the second
+		When the user views a fragment from 5 to 10 milliseconds
+		And the user views a fragment from 1 to 20 milliseconds
+		Then the UVT should be 20 milliseconds
+		
+	Scenario: Two separate fragments
+		When the user views a fragment from 1 to 10 milliseconds
+		And the user views a fragment from 21 to 30 milliseconds
+		Then the UVT should be 20 milliseconds
+		
+	Scenario: Two overlapping fragments from the right
+		When the user views a fragment from 1 to 10 milliseconds
+		And the user views a fragment from 5 to 15 milliseconds
+		Then the UVT should be 15 milliseconds
+		
+	Scenario: Two overlapping fragments from the left
+		When the user views a fragment from 10 to 20 milliseconds
+		And the user views a fragment from 5 to 15 milliseconds
+		Then the UVT should be 16 milliseconds
+		
+	Scenario: Three Fragments Second Separate From First
+		When the user views a fragment from 6 to 10 milliseconds
+		And the user views a fragment from 11 to 15 milliseconds
+		And the user views a fragment from 9 to 13 milliseconds
+		Then the UVT should be 10 milliseconds
+		
+	Scenario: Three Fragments Second Right After The First
+		When the user views a fragment from 6 to 10 milliseconds
+		And the user views a fragment from 16 to 20 milliseconds
+		And the user views a fragment from 9 to 17 milliseconds
+		Then the UVT should be 15 milliseconds
+ ```
 
 ![alt text](images/run-with-no-arguments.png "Run")
 
@@ -39,8 +89,57 @@ java -jar target/uvt.jar 0 1000 1000 2000
 ![alt text](images/run-with-no-arguments.png "Run interactively")
 
 ## The UVT Algorithm
-The core algorithm that calculates UVT is in the [`UvtCalculator` class's](src/main/java/com/shaundashjian/uvt/UvtCalculator.java) [`getUvt()` method](https://github.com/shaundashjian/unique-view-time-bdd/blob/daa7010039327780475522011574d742d776fb36/src/main/java/com/shaundashjian/uvt/UvtCalculator.java#L22). 
-![alt text](images/uvt-algorithm.png "UVT Algorithm")
+The core algorithm that calculates UVT is in the [`UvtCalculator` class](src/main/java/com/shaundashjian/uvt/UvtCalculator.java)
+```
+public int getUvt() {
+		// Sort the fragments
+		Collections.sort(fragments);
+		// Create list of ranges
+		List<Fragment> mergedRanges = new ArrayList<>();
+		// Loop through fragments
+		START_OVER:
+		for (int i = 0; i < fragments.size(); i++) {
+			Fragment fragment = fragments.get(i);
+			boolean covered = false;
+			// If fragment is already fully covered, do nothing
+			for (Fragment range : mergedRanges) {
+				if (fragment.getStartTime() >= range.getStartTime() && fragment.getStartTime() <= range.getEndTime()
+						&& fragment.getEndTime() >= range.getStartTime()
+						&& fragment.getEndTime() <= range.getEndTime()) {
+					covered = true;
+					break;
+				}
+			}
+			// If fragment is not already fully covered
+			if (!covered) {
+				// Check if the fragment partially overlaps an existing range
+				
+				for (Fragment range : mergedRanges) {
+					if (fragment.getStartTime() >= range.getStartTime() && fragment.getStartTime() <= range.getEndTime()
+							&& fragment.getEndTime() > range.getEndTime()) {
+						fragment.setStartTime(range.getEndTime() + 1);
+						i--;
+						continue START_OVER;
+					}
+					if (fragment.getStartTime() < range.getStartTime() 
+							&& fragment.getEndTime() >= range.getStartTime()
+							&& fragment.getEndTime() <= range.getEndTime()) {
+						fragment.setEndTime(range.getStartTime() - 1);
+					}
+				}
+
+				mergedRanges.add(fragment);
+
+			}
+		}
+		// Calculate uvt using all merged ranges
+		int uvt = 0;
+		for (Fragment fragment : mergedRanges) {
+			uvt += fragment.getEndTime() - fragment.getStartTime() + 1;
+		}
+		return uvt;
+	}
+  ```
 
 ## How to Run the Unit Tests and Generate the HTML Unit Test Report
 The unit tests are written with [JUnit](https://junit.org/junit4). To run the tests:
