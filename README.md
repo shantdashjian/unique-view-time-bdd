@@ -51,6 +51,12 @@ Feature: UVT Calculation
 		And the user views a fragment from 16 to 20 milliseconds
 		And the user views a fragment from 9 to 17 milliseconds
 		Then the UVT should be 15 milliseconds
+		
+	Scenario: Three Fragments Second Overlaps The First
+		When the user views a fragment from 1 to 10 milliseconds
+		And the user views a fragment from 5 to 15 milliseconds
+		And the user views a fragment from 7 to 13 milliseconds
+		Then the UVT should be 15 milliseconds
  ```
 
 ![alt text](images/run-with-no-arguments.png "Run")
@@ -125,6 +131,8 @@ public int getUvt() {
 							&& fragment.getEndTime() >= range.getStartTime()
 							&& fragment.getEndTime() <= range.getEndTime()) {
 						fragment.setEndTime(range.getStartTime() - 1);
+						i--;
+						continue START_OVER;
 					}
 				}
 
